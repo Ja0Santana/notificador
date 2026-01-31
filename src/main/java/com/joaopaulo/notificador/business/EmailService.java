@@ -34,7 +34,7 @@ public class EmailService {
             MimeMessageHelper mimeMensagemHelper = new MimeMessageHelper(mensagem, true, StandardCharsets.UTF_8.name());
 
             mimeMensagemHelper.setFrom(new InternetAddress(remetente, nomeRemetente));
-            mimeMensagemHelper.setTo(InternetAddress.parse(tarefaDTO.getEmailUsuario()));
+            mimeMensagemHelper.setTo(tarefaDTO.getEmailUsuario());
             mimeMensagemHelper.setSubject("Notificação de Tarefa");
 
             Context context = new Context();
