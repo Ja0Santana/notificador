@@ -1,0 +1,27 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: paulo.jp806@gmail.com
+    password: ${MAIL_PASSWORD}
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+  thymeleaf:
+    enabled: true
+
+envio:
+  email:
+    remetente: paulo.jp806@gmail.com
+    nomeRemetente: 'Joao Paulo Santana'
+
+server:
+  port: 8082
