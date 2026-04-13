@@ -5,8 +5,8 @@ spring:
   mail:
     host: sandbox.smtp.mailtrap.io
     port: 2525
-    username: ${MAILTRAP_USERNAME}
-    password: ${MAILTRAP_PASSWORD}
+    username: ${MAILTRAP_USER}
+    password: ${MAILTRAP_PASS}
     properties:
       mail:
         smtp:
@@ -24,8 +24,8 @@ spring:
 
 envio:
   email:
-    remetente: ${MAIL_REMETENTE}
-    nomeRemetente: ${MAIL_NOME_REMETENTE}
+    remetente: paulo.jp806@gmail.com
+    nomeRemetente: João Paulo Santana
 
 server:
   port: 8082

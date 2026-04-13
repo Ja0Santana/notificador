@@ -22,10 +22,10 @@ public class EmailService {
     private final JavaMailSender javaMailSender;
     private final TemplateEngine templateEngine;
 
-    @Value("${envio.email.remetente}")
+    @Value("${envio.email.remetente:paulo.jp806@gmail.com}")
     private String remetente;
 
-    @Value("${envio.email.nomeRemetente}")
+    @Value("${envio.email.nomeRemetente:João Paulo Santana}")
     private String nomeRemetente;
 
     public void enviarEmail(TarefaDTO tarefaDTO) {
