@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Aviso de Vencimento - Plannit</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 85%;
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #edf2f7;
+        }
+        .header {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #1a202c;
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+        }
+        .content {
+            margin: 20px 0;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #fff5f5;
+            color: #c53030;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .task-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #7c3aed;
+            color: #ffffff !important;
+            padding: 16px 32px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.2);
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #edf2f7;
+            text-align: center;
+            color: #a0aec0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="badge">Atenção: Venceu</div>
+        <h1>Plannit Pro</h1>
+    </div>
+    <div class="content">
+        <p>Olá,</p>
+        <p>Identificamos que uma de suas tarefas agendadas **venceu** e ainda não teve o status atualizado:</p>
+        <div class="task-name" th:text="${nomeTarefa}">Nome da Tarefa</div>
+        <p th:text="${descricao}">Descrição da Tarefa</p>
+        <p>O horário previsto era: <strong th:text="${dataEvento}">Horário</strong>.</p>
+        
+        <a href="http://localhost:5173" class="btn">Verificar Status agora</a>
+    </div>
+    <div class="footer">
+        <p>Este é um aviso automático. Por favor, não responda a este e-mail.</p>
+    </div>
+</div>
+</body>
+</html>
