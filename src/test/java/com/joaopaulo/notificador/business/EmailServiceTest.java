@@ -22,6 +22,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings("null")
 class EmailServiceTest {
 
     @Mock
@@ -89,3 +90,5 @@ class EmailServiceTest {
                 .hasMessageContaining("Erro ao enviar email");
     }
 }
+
+

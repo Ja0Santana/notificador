@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 
 @Service
 @RequiredArgsConstructor
+@SuppressWarnings("null")
 public class EmailService {
     private final JavaMailSender javaMailSender;
     private final TemplateEngine templateEngine;
@@ -57,3 +58,5 @@ public class EmailService {
         }
     }
 }
+
+
