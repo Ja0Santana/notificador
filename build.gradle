@@ -56,6 +56,6 @@ sonarqube {
 	properties {
 		property "sonar.projectKey", "notificador"
 		property "sonar.host.url", System.getenv("SONAR_HOST_URL") ?: "http://localhost:9000"
-		property "sonar.token", System.getenv("SONAR_TOKEN") ?: ""
+		property "sonar.token", System.getenv("SONAR_TOKEN") ?: project.findProperty("sonar.token") ?: ""
 	}
 }
